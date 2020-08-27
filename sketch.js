@@ -22,7 +22,7 @@ function mainCanvas(p) {
     }
 
     p.draw=function() {
-        if(!CharSettings.settingChanged && !CharSettings.fontChanged ) {
+        if(!CharSettings.settingChanged) {
             return;
         }
         CharSettings.settingChanged = false;
@@ -32,6 +32,7 @@ function mainCanvas(p) {
             p.loadFont(CharSettings.font.data,function(f) {
                 p.textFont(f);
                 CharSettings.pfont = f;
+                CharSettings.setChanged();
             });
         }
         p.background(50);
