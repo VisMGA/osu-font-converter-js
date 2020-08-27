@@ -19,11 +19,10 @@ function mainCanvas(p) {
     p.handleFontSelect =function(file) {
         CharSettings.font = file;
         CharSettings.fontChanged = true;
-        setTimeout(CharSettings.setChanged,1000);
     }
 
     p.draw=function() {
-        if(!CharSettings.settingChanged) {
+        if(!CharSettings.settingChanged && !CharSettings.fontChanged ) {
             return;
         }
         CharSettings.settingChanged = false;
