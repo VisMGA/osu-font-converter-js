@@ -19,6 +19,7 @@ function mainCanvas(p) {
     p.handleFontSelect =function(file) {
         CharSettings.font = file;
         CharSettings.fontChanged = true;
+        CharSettings.setChanged();
     }
 
     p.draw=function() {
