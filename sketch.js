@@ -133,7 +133,7 @@ function recursiveGenerate(zb,i) {
         if(CharSettings.charCollection[i].character == '%'){ 
             if(CharSettings.scoreChecked()) names.push("score-percent");
         } else if (CharSettings.charCollection[i].character == '.') {
-            if(CharSettings.scoreChecked()) names.push("score-period");
+            if(CharSettings.scoreChecked()) names.push("score-dot");
         } else if (CharSettings.charCollection[i].character == ',') {
             if(CharSettings.scoreChecked()) names.push("score-comma");
         } else if (CharSettings.charCollection[i].character.toLowerCase() == 'x') {
