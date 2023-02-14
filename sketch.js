@@ -80,7 +80,7 @@ function mainCanvas(p) {
     p.mousePressed = function() {
         var widthTrack = 0;
         for(var i = 0; i < CharSettings.charCollection.length; i++) {
-            if(p.mouseX > widthTrack && p.mouseX < widthTrack + CharSettings.iwidth && p.mouseY > 0 && p.mouseY < CharSettings.iheight) {
+            if(p.mouseX > widthTrack && p.mouseX < widthTrack + CharSettings.charCollection[i].getIwidth() && p.mouseY > 0 && p.mouseY < CharSettings.charCollection[i].getIheight()) {
                 CharSettings.charCollection[i].activate();
             }
             widthTrack+=CharSettings.iwidth+1;
